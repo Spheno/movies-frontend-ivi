@@ -1,0 +1,51 @@
+@import '../../styles/constants.scss';
+
+$tabletHeight: 48px;
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.text {
+  @include dominantTextSize();
+  color: $colorGreyTransparent_48;
+}
+
+.tabletText {
+  color: #312b45;
+  @include smallTextSize;
+  margin: $tabletHeight + 16px 0;
+  align-self: flex-start;
+}
+
+.tablet {
+  background-color: rgba(31, 27, 46, 0.88);
+  box-shadow: 0 -20px 40px rgba(7, 5, 14, 0.24);
+  display: grid;
+  grid-template-columns: repeat(5, minmax(64px, 120px));
+  height: $tabletHeight;
+  justify-content: center;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: $footerIndex;
+}
+
+@media screen and (min-width: $breakpointTablet) {
+  .tabletText {
+    margin: $tabletHeight + 24px 0;
+  }
+}

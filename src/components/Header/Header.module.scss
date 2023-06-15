@@ -1,0 +1,125 @@
+@import '../../styles/constants.scss';
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 64px;
+  color: $colorGreyTransparent_48;
+  z-index: $headerIndex;
+}
+
+.leftContainer {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  z-index: $headerIndex;
+}
+
+.rightContainer {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  z-index: $headerIndex;
+}
+
+.subscribe {
+  padding: 7px 11px;
+  background: linear-gradient(270deg, $colorRed, $colorPurple);
+  border: none;
+
+  &Title {
+    @include smallTextSize($fw: 500);
+  }
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  height: 100%;
+
+  &Icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.bell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 100%;
+  perspective: 100px;
+
+  &Icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 12px 0;
+  border: 2px solid $colorGreyTransparent_48;
+  border-radius: 8px;
+
+  &Wrapper {
+    padding: 12px 0;
+  }
+
+  &Icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (min-width: $breakpointTablet) {
+  .section {
+    height: 72px;
+  }
+}
+
+@media screen and (min-width: $breakpointDesktop) {
+  .search {
+    transition: color 0.4s;
+
+    &:hover {
+      color: $colorWhite;
+      transition: color 0.4s;
+    }
+  }
+
+  .bell {
+    &Icon {
+      transition: color 0.4s, transform 0.4s;
+    }
+
+    &:hover {
+      .bellIcon {
+        color: $colorWhite;
+        transform: translateZ(15px);
+        transition: color 0.4s, transform 0.4s;
+      }
+    }
+  }
+
+  .user {
+    transition: border-color 0.3s, box-shadow 0.3s, color 0.3s;
+
+    &:hover {
+      box-shadow: 0 4px 16px $colorGreyTransparent_24;
+      border-color: $colorWhite;
+      color: $colorWhite;
+      transition: border-color 0.3s, box-shadow 0.3s, color 0.3s;
+    }
+  }
+}

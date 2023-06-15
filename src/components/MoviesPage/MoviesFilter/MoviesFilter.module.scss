@@ -1,0 +1,32 @@
+@import '../../../styles/constants.scss';
+
+$breakpointTabletLocal: 1024px;
+$tabletButtonWidth: calc(50% - 6px);
+$desktopButtonWidth: calc(calc(100% / 6) - 12px);
+
+.section {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 16px;
+  background-color: $colorBackgroundButton;
+  border-radius: 6px;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  gap: 12px;
+}
+
+@media screen and (min-width: $breakpointTablet) {
+  .filters {
+    grid-template-columns: repeat(auto-fit, minmax(calc($tabletButtonWidth), 1fr));
+  }
+}
+
+@media screen and (min-width: $breakpointTabletLocal) {
+  .filters {
+    grid-template-columns: repeat(auto-fit, minmax(calc($desktopButtonWidth), 1fr));
+  }
+}

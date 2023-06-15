@@ -1,0 +1,15 @@
+{
+  "head-title": {
+    "main": "Главная",
+    "movies": "Фильмы",
+    "actor": "Актёр",
+    "auth": "Авторизация",
+    "admin": "Администрирование",
+    "movie": "Фильм",
+    "not-found": "Не найдена"
+  },
+  "button-title": {
+    "watch-by-subscription": "Смотреть по подписке",
+    "watch-for-free": "Смотреть бесплатно"
+  }
+}

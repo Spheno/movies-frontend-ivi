@@ -1,0 +1,60 @@
+.dark {
+  background-color: $colorBackgroundButton;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid $colorBackgroundButton;
+  box-sizing: border-box;
+  transition-duration: 0.4s;
+  column-gap: 8px;
+
+  &:hover {
+    background-color: $colorButtonHover;
+  }
+
+  h3 {
+    @include dominantTextSize(20px, 500);
+    color: $colorWhite;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+  }
+}
+
+.dark_big {
+  @extend .dark;
+  width: 196px;
+  padding: 9px 15px;
+}
+
+.dark_small {
+  @extend .dark;
+  width: 40px;
+}
+
+.dark_middle {
+  @extend .dark;
+  padding: 4px 16px;
+}
+
+.dark_round {
+  @extend .dark;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.dark_large {
+  @extend .dark;
+  width: 196px;
+  height: 52px;
+  position: absolute;
+  top: 54px;
+  left: 0;
+  transition-duration: 0.4s;
+}
