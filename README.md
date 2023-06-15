@@ -31,7 +31,6 @@
 ### Ссылки
 
 - [Ссылка на организацию](https://github.com/hotels-group-project)
-- [Ссылка на frontend репозиторий](https://github.com/hotels-group-project/movies-frontend)
 - [Ссылка на backend репозиторий](https://github.com/hotels-group-project/movies-backend)
 
 ### Команды для локального запуска приложения
@@ -53,9 +52,5 @@
 - Типизация выполнена с помощью TypeScript
 - Маршрутизация с помощью Next.js
 - Инструменты для управления данными - Redux(Redux Toolkit)
-
-### Описание функционала
-
-- Функционал
 
 [В начало](#проект-movies)
